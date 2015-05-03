@@ -1,0 +1,516 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Nightming&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="言欢">
+    
+
+    
+    <meta name="description" content="title:搭建个人博客小结这里是本人的个人小站（采用Hexo静态web框架并部署到github上），以后会随时更新一些本人学习过程中的一些日常总结，欢迎大家一起交流。
+搭建过程选择框架当前流行的基于github Pages的个人站点有多种实现形式，下面简要介绍：
+1.jekyll框架，也是github Pages的官方推荐web框架，运行环境基于ruby on rails,由于是github p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nightming's blog">
+<meta property="og:url" content="http://yoursite.com/2015/05/03/搭建个人博客小结/index.html">
+<meta property="og:site_name" content="Nightming's blog">
+<meta property="og:description" content="title:搭建个人博客小结这里是本人的个人小站（采用Hexo静态web框架并部署到github上），以后会随时更新一些本人学习过程中的一些日常总结，欢迎大家一起交流。
+搭建过程选择框架当前流行的基于github Pages的个人站点有多种实现形式，下面简要介绍：
+1.jekyll框架，也是github Pages的官方推荐web框架，运行环境基于ruby on rails,由于是github p">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nightming's blog">
+<meta name="twitter:description" content="title:搭建个人博客小结这里是本人的个人小站（采用Hexo静态web框架并部署到github上），以后会随时更新一些本人学习过程中的一些日常总结，欢迎大家一起交流。
+搭建过程选择框架当前流行的基于github Pages的个人站点有多种实现形式，下面简要介绍：
+1.jekyll框架，也是github Pages的官方推荐web框架，运行环境基于ruby on rails,由于是github p">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Nightming&#39;s blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Nightming&#39;s blog" title="Nightming&#39;s blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Nightming&#39;s blog">Nightming&#39;s blog</a></h1>
+				<h2 class="blog-motto">a world for sharing</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/05/03/搭建个人博客小结/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="言欢" target="_blank" itemprop="author">言欢</a>
+		
+  <p class="article-time">
+    <time datetime="2015-05-03T06:04:07.146Z" itemprop="datePublished"> 发表于 2015-05-03</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title:搭建个人博客小结"><span class="toc-number">1.</span> <span class="toc-text">title:搭建个人博客小结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建过程"><span class="toc-number">2.</span> <span class="toc-text">搭建过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#选择框架"><span class="toc-number">2.1.</span> <span class="toc-text">选择框架</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#scaffolds_脚手架，也就是一个工具模板"><span class="toc-number">2.1.0.0.1.</span> <span class="toc-text">scaffolds 脚手架，也就是一个工具模板</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#scripts_写文件的js，扩展hexo的功能"><span class="toc-number">2.1.0.0.2.</span> <span class="toc-text">scripts 写文件的js，扩展hexo的功能</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#source_存放博客正文内容"><span class="toc-number">2.1.0.0.3.</span> <span class="toc-text">source 存放博客正文内容</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#source/_drafts_草稿箱"><span class="toc-number">2.1.0.0.4.</span> <span class="toc-text">source/_drafts 草稿箱</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#source/_posts_文件箱,保存我们用于写博客的-md文件"><span class="toc-number">2.1.0.0.5.</span> <span class="toc-text">source/_posts 文件箱,保存我们用于写博客的.md文件</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#themes_存放皮肤的目录"><span class="toc-number">2.1.0.0.6.</span> <span class="toc-text">themes 存放皮肤的目录</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#themes/landscape_默认的皮肤"><span class="toc-number">2.1.0.0.7.</span> <span class="toc-text">themes/landscape 默认的皮肤</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#_config-yml_全局的配置文件"><span class="toc-number">2.1.0.0.8.</span> <span class="toc-text">_config.yml 全局的配置文件</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#db-json_静态常量"><span class="toc-number">2.1.0.0.9.</span> <span class="toc-text">db.json 静态常量</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#站点信息:_定义标题，作者，语言"><span class="toc-number">2.1.0.0.10.</span> <span class="toc-text">站点信息: 定义标题，作者，语言</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#URL:_URL访问路径"><span class="toc-number">2.1.0.0.11.</span> <span class="toc-text">URL: URL访问路径</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#文件目录:_正文的存储目录"><span class="toc-number">2.1.0.0.12.</span> <span class="toc-text">文件目录: 正文的存储目录</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#写博客配置：文章标题，文章类型，外部链接等"><span class="toc-number">2.1.0.0.13.</span> <span class="toc-text">写博客配置：文章标题，文章类型，外部链接等</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#目录和标签：默认分类，分类图，标签图"><span class="toc-number">2.1.0.0.14.</span> <span class="toc-text">目录和标签：默认分类，分类图，标签图</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#归档设置：归档的类型"><span class="toc-number">2.1.0.0.15.</span> <span class="toc-text">归档设置：归档的类型</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#服务器设置：IP，访问端口，日志输出"><span class="toc-number">2.1.0.0.16.</span> <span class="toc-text">服务器设置：IP，访问端口，日志输出</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#时间和日期格式：_时间显示格式，日期显示格式"><span class="toc-number">2.1.0.0.17.</span> <span class="toc-text">时间和日期格式： 时间显示格式，日期显示格式</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#分页设置：每页显示数量"><span class="toc-number">2.1.0.0.18.</span> <span class="toc-text">分页设置：每页显示数量</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#评论：外挂的Disqus评论系统"><span class="toc-number">2.1.0.0.19.</span> <span class="toc-text">评论：外挂的Disqus评论系统</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#插件和皮肤：换皮肤，安装插件"><span class="toc-number">2.1.0.0.20.</span> <span class="toc-text">插件和皮肤：换皮肤，安装插件</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Markdown语言：markdown的标准"><span class="toc-number">2.1.0.0.21.</span> <span class="toc-text">Markdown语言：markdown的标准</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#CSS的stylus格式：是否允许压缩"><span class="toc-number">2.1.0.0.22.</span> <span class="toc-text">CSS的stylus格式：是否允许压缩</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#部署配置：github发布"><span class="toc-number">2.1.0.0.23.</span> <span class="toc-text">部署配置：github发布</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+		
+		</div>
+		
+		<h2 id="title:搭建个人博客小结">title:搭建个人博客小结</h2><p>这里是本人的个人小站（采用<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>静态web框架并部署到<a href="https://github.com/nightming/nightming.github.io" target="_blank" rel="external">github</a>上），以后会随时更新一些本人学习过程中的一些日常总结，欢迎大家一起交流。</p>
+<h2 id="搭建过程">搭建过程</h2><h3 id="选择框架">选择框架</h3><p>当前流行的基于<a href="https://pages.github.com/" target="_blank" rel="external">github Pages</a>的个人站点有多种实现形式，下面简要介绍：</p>
+<p>1.<a href="http://jekyllrb.com/" target="_blank" rel="external">jekyll</a>框架，也是<a href="https://pages.github.com/" target="_blank" rel="external">github Pages</a>的官方推荐web框架，运行环境基于<a href="http://rubyonrails.org/" target="_blank" rel="external">ruby on rails</a>,由于是github pages所以网上的资料相对较多，也更容易上手</p>
+<p>2.<a href="http://blog.getpelican.com/" target="_blank" rel="external">pelican</a>框架，是一个基于python的web静态框架，本人曾经尝试在windows环境下搭建过。需要基于makefile采用make命令编译；<br>安装也很方便，只需<code>pip install pelican</code>,<code>pelican install markdown</code>即可</p>
+<p>3.<a href="http://octopress.org/" target="_blank" rel="external">octopress</a>框架，值得注意的是同样基于jkelly生成，现在已经更新到3.0版本，值得去适用下；</p>
+<p>4.<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>框架，也即是本文需要着重介绍的静态web框架，基于<a href="https://nodejs.org/" target="_blank" rel="external">node.js</a>，相比以上三种框架，最大的特点是高效快速，这点本人有亲身体验。而且相对，修改，部署发布的命令都比较简单，只有常用的几个命令，下面介绍下具体的搭建过程；</p>
+<hr>
+<p>1.安装node.js<br>直接到官网下载，安装即可，对于windows用户尤其方便，下载.exe或者.msi格式的安装文件，方便快捷</p>
+<p>2.安装hexo，打开nodejs的command prompt采用命令<code>npm install hexo-cli -g</code>，安装完成后可以输入命令<code>hexo version</code>查看安装成功与否</p>
+<p>3.使用hexo创建项目了<br><code>hexo init blog</code><br><code>cd blog</code><br><code>npm install</code><br>然后在本地开启一个测试hexo服务器，即<code>hexo server</code>，会出现如下提示：<br><code>[info] Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</code><br>我们在留恋其中输入<code>http://localhost:4000/</code>,就可以看到生成的博客效果了，下面进行一些个人定制</p>
+<hr>
+<p>仔细看下blog文件夹下的文件，我们可以发现主要有以下这些：</p>
+<h6 id="scaffolds_脚手架，也就是一个工具模板">scaffolds 脚手架，也就是一个工具模板</h6><h6 id="scripts_写文件的js，扩展hexo的功能">scripts 写文件的js，扩展hexo的功能</h6><h6 id="source_存放博客正文内容">source 存放博客正文内容</h6><h6 id="source/_drafts_草稿箱">source/_drafts 草稿箱</h6><h6 id="source/_posts_文件箱,保存我们用于写博客的-md文件">source/_posts 文件箱,保存我们用于写博客的.md文件</h6><h6 id="themes_存放皮肤的目录">themes 存放皮肤的目录</h6><h6 id="themes/landscape_默认的皮肤">themes/landscape 默认的皮肤</h6><h6 id="_config-yml_全局的配置文件">_config.yml 全局的配置文件</h6><h6 id="db-json_静态常量">db.json 静态常量</h6><p>在这里，我们可以先定制_config.yml全局配置文件，值得注意的是初次进行修改，最好要先做一个备份，以免修改不当，或者误删了某些条目，切记。</p>
+<h6 id="站点信息:_定义标题，作者，语言">站点信息: 定义标题，作者，语言</h6><h6 id="URL:_URL访问路径">URL: URL访问路径</h6><h6 id="文件目录:_正文的存储目录">文件目录: 正文的存储目录</h6><h6 id="写博客配置：文章标题，文章类型，外部链接等">写博客配置：文章标题，文章类型，外部链接等</h6><h6 id="目录和标签：默认分类，分类图，标签图">目录和标签：默认分类，分类图，标签图</h6><h6 id="归档设置：归档的类型">归档设置：归档的类型</h6><h6 id="服务器设置：IP，访问端口，日志输出">服务器设置：IP，访问端口，日志输出</h6><h6 id="时间和日期格式：_时间显示格式，日期显示格式">时间和日期格式： 时间显示格式，日期显示格式</h6><h6 id="分页设置：每页显示数量">分页设置：每页显示数量</h6><h6 id="评论：外挂的Disqus评论系统">评论：外挂的Disqus评论系统</h6><h6 id="插件和皮肤：换皮肤，安装插件">插件和皮肤：换皮肤，安装插件</h6><h6 id="Markdown语言：markdown的标准">Markdown语言：markdown的标准</h6><h6 id="CSS的stylus格式：是否允许压缩">CSS的stylus格式：是否允许压缩</h6><h6 id="部署配置：github发布">部署配置：github发布</h6><p>在修改配置文件时，尤其需要注意每个条目标题后都要留一个空格才能填写具体的内容，我就在这里浪费了不少弯路才发现问题；</p>
+<hr>
+<p>4.将博客醒目部署到github上，前提是你的github庄户已经存在了username.github.io的repository，如果没有需要先创建。<br>采用<code>hexo generate</code>生成本地html，javascript，css文件，<br>注意还需要在__config.yml文件中，加入以下条目：</p>
+<pre><code><span class="attribute">deplpy</span>:
+    <span class="attribute">type</span>: git
+    <span class="attribute">repository</span>: <span class="attribute">https</span>:<span class="comment">//github.com/zippera/zippera.github.io.git</span>
+    <span class="attribute">branch</span>: master
+</code></pre><p>修改完成后输入命令<code>hexo deploy</code>即可完成部署；</p>
+<p>以上就完成了基本的博客搭建，由于缺乏个性化的定制，按上面步骤搭建出来的博客基本上是千篇一律的，想要你的博客与众不同还要进行主题，插件等设置。</p>
+<p>tips：hexo常用的命令主要有以下四个</p>
+<p><code>hexo g</code>==<code>hexo generate</code></p>
+<p><code>hexo d</code>==<code>hexo deploy</code></p>
+<p><code>hexo s</code>==<code>hexo server</code></p>
+<p><code>hexo n</code>==<code>hexo new</code></p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2015/05/03/搭建个人博客小结/" data-title="Nightming&#39;s blog" data-tsina="2182964424" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/04/29/hello-world/"  title="Hello World">
+ <strong>下一篇：</strong><br/> 
+ <span>Hello World
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/05/03/搭建个人博客小结/" data-title="" data-url="http://yoursite.com/2015/05/03/搭建个人博客小结/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title:搭建个人博客小结"><span class="toc-number">1.</span> <span class="toc-text">title:搭建个人博客小结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建过程"><span class="toc-number">2.</span> <span class="toc-text">搭建过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#选择框架"><span class="toc-number">2.1.</span> <span class="toc-text">选择框架</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#scaffolds_脚手架，也就是一个工具模板"><span class="toc-number">2.1.0.0.1.</span> <span class="toc-text">scaffolds 脚手架，也就是一个工具模板</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#scripts_写文件的js，扩展hexo的功能"><span class="toc-number">2.1.0.0.2.</span> <span class="toc-text">scripts 写文件的js，扩展hexo的功能</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#source_存放博客正文内容"><span class="toc-number">2.1.0.0.3.</span> <span class="toc-text">source 存放博客正文内容</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#source/_drafts_草稿箱"><span class="toc-number">2.1.0.0.4.</span> <span class="toc-text">source/_drafts 草稿箱</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#source/_posts_文件箱,保存我们用于写博客的-md文件"><span class="toc-number">2.1.0.0.5.</span> <span class="toc-text">source/_posts 文件箱,保存我们用于写博客的.md文件</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#themes_存放皮肤的目录"><span class="toc-number">2.1.0.0.6.</span> <span class="toc-text">themes 存放皮肤的目录</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#themes/landscape_默认的皮肤"><span class="toc-number">2.1.0.0.7.</span> <span class="toc-text">themes/landscape 默认的皮肤</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#_config-yml_全局的配置文件"><span class="toc-number">2.1.0.0.8.</span> <span class="toc-text">_config.yml 全局的配置文件</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#db-json_静态常量"><span class="toc-number">2.1.0.0.9.</span> <span class="toc-text">db.json 静态常量</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#站点信息:_定义标题，作者，语言"><span class="toc-number">2.1.0.0.10.</span> <span class="toc-text">站点信息: 定义标题，作者，语言</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#URL:_URL访问路径"><span class="toc-number">2.1.0.0.11.</span> <span class="toc-text">URL: URL访问路径</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#文件目录:_正文的存储目录"><span class="toc-number">2.1.0.0.12.</span> <span class="toc-text">文件目录: 正文的存储目录</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#写博客配置：文章标题，文章类型，外部链接等"><span class="toc-number">2.1.0.0.13.</span> <span class="toc-text">写博客配置：文章标题，文章类型，外部链接等</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#目录和标签：默认分类，分类图，标签图"><span class="toc-number">2.1.0.0.14.</span> <span class="toc-text">目录和标签：默认分类，分类图，标签图</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#归档设置：归档的类型"><span class="toc-number">2.1.0.0.15.</span> <span class="toc-text">归档设置：归档的类型</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#服务器设置：IP，访问端口，日志输出"><span class="toc-number">2.1.0.0.16.</span> <span class="toc-text">服务器设置：IP，访问端口，日志输出</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#时间和日期格式：_时间显示格式，日期显示格式"><span class="toc-number">2.1.0.0.17.</span> <span class="toc-text">时间和日期格式： 时间显示格式，日期显示格式</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#分页设置：每页显示数量"><span class="toc-number">2.1.0.0.18.</span> <span class="toc-text">分页设置：每页显示数量</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#评论：外挂的Disqus评论系统"><span class="toc-number">2.1.0.0.19.</span> <span class="toc-text">评论：外挂的Disqus评论系统</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#插件和皮肤：换皮肤，安装插件"><span class="toc-number">2.1.0.0.20.</span> <span class="toc-text">插件和皮肤：换皮肤，安装插件</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Markdown语言：markdown的标准"><span class="toc-number">2.1.0.0.21.</span> <span class="toc-text">Markdown语言：markdown的标准</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#CSS的stylus格式：是否允许压缩"><span class="toc-number">2.1.0.0.22.</span> <span class="toc-text">CSS的stylus格式：是否允许压缩</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#部署配置：github发布"><span class="toc-number">2.1.0.0.23.</span> <span class="toc-text">部署配置：github发布</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.cnblogs.com/tornadomeet" target="_blank" title="网易学长（DL） Blog">网易学长（DL） Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.hankcs.com" target="_blank" title="码农场hankcs">码农场hankcs</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://x-wei.github.io" target="_blank" title="x-wei">x-wei</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.julyedu.com" target="_blank" title="七月算法">七月算法</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.csdn.net/v_JULY_v" target="_blank" title="结构之法，算法之道">结构之法，算法之道</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m nightming,a coder and aim to be a maker. <br/>
+			This is my blog,let&#39;s share mind.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/言小欢sapphire" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/nightming for https://github.com/nightming" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="https://www.zhihu.com/people/http://www.zhihu.com/people/jark" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:mingknight@sjtu.edu.cn" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="言欢">言欢</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"nightming"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F69ea34071fd09032017f8a278ef31f' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
